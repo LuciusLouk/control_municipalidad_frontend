@@ -1,0 +1,25 @@
+<section class="row">
+    <div *ngFor="let c of controles" class="card col-6">
+        <div class="card-body">
+          <h5 class="card-title">{{c.fecha}}</h5>
+          <p class="card-text">{{c.notaAdicional}}</p>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Numero de Licencia: {{c.licencia.numero}}</li>
+            <li class="list-group-item">Expiracion de Licencia: {{c.licencia.fechaExpiracion}}</li>
+          <li class="list-group-item">Vehículo: {{c.licencia.vehiculo.marca}}</li>
+          <li class="list-group-item">Conductores</li>
+          <div *ngFor="let c of c.licencia.conductores">
+            
+            <li class="list-group-item">** CONDUCTOR **</li>
+            <li class="list-group-item">Apellido: {{c.apellido}}</li>
+            <li class="list-group-item">nombre: {{c.apellido}}</li>
+            <li class="list-group-item">**  **</li>
+          </div>
+
+          <li class="list-group-item">
+            <img [src]="c.dniFrente" class="img-fluid rounded" alt="curso" width="640px" style="margin-bottom: 30px" />
+          </li>
+        </ul>
+      </div>
+</section>

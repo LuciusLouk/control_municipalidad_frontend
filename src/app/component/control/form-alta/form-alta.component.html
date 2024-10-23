@@ -1,0 +1,17 @@
+<section>
+  <form>
+    <div class="mb-3">
+      <label for="inputLicencia" class="form-label">Numero de Licencia</label>
+      <input type="number" class="form-control" id="inputLicencia" [(ngModel)]="numeroLicencia" name="licencia">
+    </div>
+    <div class="mb-3">
+      <label for="inputNota" class="form-label">Notas Adicionales</label>
+      <input type="text" class="form-control" id="inputNota" [(ngModel)]="obControl.notaAdicional" name="nota">
+    </div>
+    <div class="col-md-4">
+      <label class="form-label" for="file">Subir Frente de DNI</label>
+      <input id="file" type="file" accept="image/*" (change)="onFileSelected($event)" />
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="registrarControl()">Registrar</button>
+  </form>
+</section>
